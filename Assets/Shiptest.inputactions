@@ -1,0 +1,99 @@
+{
+    "version": 1,
+    "name": "Shiptest",
+    "maps": [
+        {
+            "name": "test",
+            "id": "35b493a1-3c44-4965-866c-3539768ee697",
+            "actions": [
+                {
+                    "name": "pitch_up",
+                    "type": "Button",
+                    "id": "4760d13e-4c31-463f-9c67-58b6df1850d0",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false,
+                    "priority": 0
+                },
+                {
+                    "name": "pitch_down",
+                    "type": "Button",
+                    "id": "9bfd0187-ec3f-4f1f-807a-53b999a1a170",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false,
+                    "priority": 0
+                },
+                {
+                    "name": "yaw_left",
+                    "type": "Button",
+                    "id": "4d8bd5ee-3eb4-44d4-a390-555d898e9eef",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false,
+                    "priority": 0
+                },
+                {
+                    "name": "yaw_right",
+                    "type": "Button",
+                    "id": "bb0ddb5e-d692-437f-9772-c492b8a6acb9",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false,
+                    "priority": 0
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "3f5be30c-c354-4b32-94f8-694763b19bed",
+                    "path": "<Keyboard>/upArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "pitch_up",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "c3d7c753-3049-4523-82fd-cdb7f00f85fb",
+                    "path": "<Keyboard>/downArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "pitch_down",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "348a0305-630e-4128-bc4d-76e467bcac26",
+                    "path": "<Keyboard>/leftArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "yaw_left",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "eb0819db-22b1-443c-a68e-6a3b4b54353b",
+                    "path": "<Keyboard>/rightArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "yaw_right",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
