@@ -107,3 +107,7 @@ InitTestScene*.unity*
 
 # Auto-generated cache in Assets folder
 /[Aa]ssets/[Ss]ceneDependencyCache*
+
+# Local Copilot project instructions and feature planning
+/.github/copilot-instructions.md
+/.github/feature-list.md
