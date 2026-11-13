@@ -1811,6 +1811,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1236430790}
+  - component: {fileID: 1236430792}
+  - component: {fileID: 1236430793}
+  - component: {fileID: 1236430794}
   - component: {fileID: 1236430791}
   m_Layer: 0
   m_Name: Stick Pivot
@@ -1847,7 +1850,176 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c5a58d1a3e34d4c9f3f5d3d5d0e7e1a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::StickRotationLimiter
+  gripAction:
+    m_Name: Grip
+    m_Type: 0
+    m_ExpectedControlType: Button
+    m_Id: c7937c78-cea4-4888-8feb-8d9da13005f2
+    m_Processors: ''
+    m_Interactions: ''
+    m_SingletonActionBindings:
+    - m_Name: ''
+      m_Id: a63b5d7e-3c5f-4d7b-8a91-2e6f4c8b1d05
+      m_Path: <XRSimulatedController>{LeftHand}/grip
+      m_Interactions: ''
+      m_Processors: ''
+      m_Groups: ''
+      m_Action: Grip
+      m_Flags: 0
+    - m_Name: ''
+      m_Id: b74c6e8f-4d6a-5e8c-9b02-3f7a5d9c2e16
+      m_Path: <XRSimulatedController>{RightHand}/grip
+      m_Interactions: ''
+      m_Processors: ''
+      m_Groups: ''
+      m_Action: Grip
+      m_Flags: 0
+    - m_Name: ''
+      m_Id: c85d7f90-5e7b-6f9d-a013-4a8b6e0d3f27
+      m_Path: <XRController>{LeftHand}/gripPressed
+      m_Interactions: ''
+      m_Processors: ''
+      m_Groups: ''
+      m_Action: Grip
+      m_Flags: 0
+    - m_Name: ''
+      m_Id: d96e80a1-6f8c-7a0e-b124-5b9c7f1e4a38
+      m_Path: <XRController>{RightHand}/gripPressed
+      m_Interactions: ''
+      m_Processors: ''
+      m_Groups: ''
+      m_Action: Grip
+      m_Flags: 0
+    m_Flags: 0
+    m_Priority: 0
+  gripThreshold: 0.1
   maxAngle: 30
+--- !u!65 &1236430792
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1236430789}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.35, y: 1.1, z: 0.35}
+  m_Center: {x: 0, y: 0.55, z: 0}
+--- !u!54 &1236430793
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1236430789}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 1
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!114 &1236430794
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1236430789}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ad34abafad169848a38072baa96cdb2, type: 3}
+  m_Name: ''
+  m_EditorClassIdentifier: ''
+  m_InteractionManager: {fileID: 0}
+  m_Colliders: []
+  m_InteractionLayers:
+    m_Bits: 1
+  m_DistanceCalculationMode: 1
+  m_SelectMode: 0
+  m_FocusMode: 1
+  m_CustomReticle: {fileID: 0}
+  m_AllowGazeInteraction: 0
+  m_AllowGazeSelect: 0
+  m_OverrideGazeTimeToSelect: 0
+  m_GazeTimeToSelect: 0.5
+  m_OverrideTimeToAutoDeselectGaze: 0
+  m_TimeToAutoDeselectGaze: 3
+  m_AllowGazeAssistance: 0
+  m_StartingHoverFilters: []
+  m_StartingSelectFilters: []
+  m_StartingInteractionStrengthFilters: []
+  m_AutoFindParentInteractableInHierarchy: 0
+  m_ParentInteractableObject: {fileID: 0}
+  m_AttachTransform: {fileID: 0}
+  m_SecondaryAttachTransform: {fileID: 0}
+  m_UseDynamicAttach: 1
+  m_MatchAttachPosition: 1
+  m_MatchAttachRotation: 1
+  m_SnapToColliderVolume: 1
+  m_ReinitializeDynamicAttachEverySingleGrab: 1
+  m_AttachEaseInTime: 0
+  m_MovementType: 2
+  m_PredictedVisualsTransform: {fileID: 0}
+  m_VelocityDamping: 1
+  m_VelocityScale: 1
+  m_AngularVelocityDamping: 1
+  m_AngularVelocityScale: 1
+  m_TrackPosition: 0
+  m_SmoothPosition: 0
+  m_SmoothPositionAmount: 1
+  m_TightenPosition: 0.1
+  m_TrackRotation: 1
+  m_SmoothRotation: 0
+  m_SmoothRotationAmount: 1
+  m_TightenRotation: 0.1
+  m_TrackScale: 0
+  m_SmoothScale: 0
+  m_SmoothScaleAmount: 8
+  m_TightenScale: 0.1
+  m_ThrowOnDetach: 0
+  m_ThrowSmoothingDuration: 0.25
+  m_ThrowSmoothingCurve:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  m_ThrowVelocityScale: 1
+  m_ThrowAngularVelocityScale: 1
+  m_ForceGravityOnDetach: 0
+  m_RetainTransformParent: 1
+  m_StartingSingleGrabTransformers: []
+  m_StartingMultipleGrabTransformers: []
+  m_AddDefaultGrabTransformers: 1
+  m_FarAttachMode: 0
+  m_LimitLinearVelocity: 0
+  m_LimitAngularVelocity: 0
+  m_MaxLinearVelocityDelta: 10
+  m_MaxAngularVelocityDelta: 20
 --- !u!1 &1309948933
 GameObject:
   m_ObjectHideFlags: 0
@@ -1898,7 +2070,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 1382158856}
     m_Modifications:
     - target: {fileID: 2243020122175513880, guid: 77e7c27b2c5525e4aa8cc9f99d654486, type: 3}
       propertyPath: m_SizeDelta.x
@@ -2230,6 +2402,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1382158856}
+  - component: {fileID: 1382158857}
   m_Layer: 0
   m_Name: Ship
   m_TagString: Untagged
@@ -2253,6 +2426,21 @@ Transform:
   - {fileID: 200000001}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1382158857
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1382158855}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a44e08f5eb8db284da613ceb6bff8c12, type: 3}
+  m_Name: ''
+  m_EditorClassIdentifier: Assembly-CSharp::Shiptest
+  movementStick: {fileID: 1236430790}
+  maxStickAngle: 30
+  speed: 2
 --- !u!4 &1610180893 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7917674758246323947, guid: 77e7c27b2c5525e4aa8cc9f99d654486, type: 3}

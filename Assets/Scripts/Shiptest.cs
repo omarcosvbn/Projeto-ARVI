@@ -1,29 +1,21 @@
 using UnityEngine;
-using UnityEngine.InputSystem;
 
-public class ActionRotator : MonoBehaviour {
-    [SerializeField] private InputActionReference yawLeft;
-    [SerializeField] private InputActionReference yawRight;
-    [SerializeField] private InputActionReference pitchUp;
-    [SerializeField] private InputActionReference pitchDown;
-    [SerializeField] private float speed = 45f;
-
-    private void OnEnable() {
-        yawLeft.action.Enable();
-        yawRight.action.Enable();
-        pitchUp.action.Enable();
-        pitchDown.action.Enable();
-    }
+public class Shiptest : MonoBehaviour {
+    [SerializeField] private Transform movementStick;
+    [SerializeField, Range(0f, 180f)] private float maxStickAngle = 30f;
+    [SerializeField, Min(0f)] private float speed = 2f;
 
     private void Update() {
-        float yaw = Read(yawRight) - Read(yawLeft);
-        float pitch = Read(pitchDown) - Read(pitchUp);
+        if (movementStick == null || maxStickAngle <= 0f) {
+            return;
+        }
 
-        transform.Rotate(Vector3.up, yaw * speed * Time.deltaTime, Space.World);
-        transform.Rotate(Vector3.right, pitch * speed * Time.deltaTime, Space.Self);
+        float stickAngle = Mathf.DeltaAngle(0f, movementStick.localEulerAngles.z);
+        float horizontalInput = Mathf.Clamp(stickAngle / maxStickAngle, -1f, 1f);
+        transform.Translate(Vector3.right * horizontalInput * speed * Time.deltaTime, Space.World);
     }
 
-    private float Read(InputActionReference reference) {
-        return reference.action.ReadValue<float>();
+    private void OnValidate() {
+        maxStickAngle = Mathf.Clamp(maxStickAngle, 0f, 180f);
     }
 }
