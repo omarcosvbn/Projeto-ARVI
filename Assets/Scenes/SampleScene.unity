@@ -1855,39 +1855,39 @@ MonoBehaviour:
     m_Type: 0
     m_ExpectedControlType: Button
     m_Id: c7937c78-cea4-4888-8feb-8d9da13005f2
-    m_Processors: ''
-    m_Interactions: ''
+    m_Processors: 
+    m_Interactions: 
     m_SingletonActionBindings:
-    - m_Name: ''
+    - m_Name: 
       m_Id: a63b5d7e-3c5f-4d7b-8a91-2e6f4c8b1d05
       m_Path: <XRSimulatedController>{LeftHand}/grip
-      m_Interactions: ''
-      m_Processors: ''
-      m_Groups: ''
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
       m_Action: Grip
       m_Flags: 0
-    - m_Name: ''
+    - m_Name: 
       m_Id: b74c6e8f-4d6a-5e8c-9b02-3f7a5d9c2e16
       m_Path: <XRSimulatedController>{RightHand}/grip
-      m_Interactions: ''
-      m_Processors: ''
-      m_Groups: ''
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
       m_Action: Grip
       m_Flags: 0
-    - m_Name: ''
+    - m_Name: 
       m_Id: c85d7f90-5e7b-6f9d-a013-4a8b6e0d3f27
       m_Path: <XRController>{LeftHand}/gripPressed
-      m_Interactions: ''
-      m_Processors: ''
-      m_Groups: ''
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
       m_Action: Grip
       m_Flags: 0
-    - m_Name: ''
+    - m_Name: 
       m_Id: d96e80a1-6f8c-7a0e-b124-5b9c7f1e4a38
       m_Path: <XRController>{RightHand}/gripPressed
-      m_Interactions: ''
-      m_Processors: ''
-      m_Groups: ''
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
       m_Action: Grip
       m_Flags: 0
     m_Flags: 0
@@ -1922,10 +1922,10 @@ Rigidbody:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1236430789}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -1940,7 +1940,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 1
   m_Interpolate: 1
-  m_Constraints: 0
+  m_Constraints: 16
   m_CollisionDetection: 0
 --- !u!114 &1236430794
 MonoBehaviour:
@@ -1952,8 +1952,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0ad34abafad169848a38072baa96cdb2, type: 3}
-  m_Name: ''
-  m_EditorClassIdentifier: ''
+  m_Name: 
+  m_EditorClassIdentifier: 
   m_InteractionManager: {fileID: 0}
   m_Colliders: []
   m_InteractionLayers:
@@ -1969,6 +1969,48 @@ MonoBehaviour:
   m_OverrideTimeToAutoDeselectGaze: 0
   m_TimeToAutoDeselectGaze: 3
   m_AllowGazeAssistance: 0
+  m_FirstHoverEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_LastHoverExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_HoverEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_HoverExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FirstSelectEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_LastSelectExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_SelectEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_SelectExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FirstFocusEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_LastFocusExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FocusEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FocusExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Activated:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Deactivated:
+    m_PersistentCalls:
+      m_Calls: []
   m_StartingHoverFilters: []
   m_StartingSelectFilters: []
   m_StartingInteractionStrengthFilters: []
@@ -2011,6 +2053,7 @@ MonoBehaviour:
   m_ThrowVelocityScale: 1
   m_ThrowAngularVelocityScale: 1
   m_ForceGravityOnDetach: 0
+  m_UnparentTransformOnGrab: 1
   m_RetainTransformParent: 1
   m_StartingSingleGrabTransformers: []
   m_StartingMultipleGrabTransformers: []
@@ -2424,6 +2467,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 200000001}
+  - {fileID: 1655472360}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1382158857
@@ -2436,7 +2480,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a44e08f5eb8db284da613ceb6bff8c12, type: 3}
-  m_Name: ''
+  m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Shiptest
   movementStick: {fileID: 1236430790}
   maxStickAngle: 30
@@ -2444,6 +2488,11 @@ MonoBehaviour:
 --- !u!4 &1610180893 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7917674758246323947, guid: 77e7c27b2c5525e4aa8cc9f99d654486, type: 3}
+  m_PrefabInstance: {fileID: 1373153106}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1655472360 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8806329115733545878, guid: 77e7c27b2c5525e4aa8cc9f99d654486, type: 3}
   m_PrefabInstance: {fileID: 1373153106}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1681154854
@@ -2859,7 +2908,6 @@ MeshFilter:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
-  - {fileID: 1373153106}
   - {fileID: 610590593}
   - {fileID: 1825945902}
   - {fileID: 87454428}
