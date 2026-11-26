@@ -1893,7 +1893,7 @@ MonoBehaviour:
     m_Flags: 0
     m_Priority: 0
   gripThreshold: 0.1
-  maxAngle: 30
+  maxAngle: 10
 --- !u!65 &1236430792
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1940,7 +1940,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 1
   m_Interpolate: 1
-  m_Constraints: 16
+  m_Constraints: 48
   m_CollisionDetection: 0
 --- !u!114 &1236430794
 MonoBehaviour:
@@ -2053,12 +2053,12 @@ MonoBehaviour:
   m_ThrowVelocityScale: 1
   m_ThrowAngularVelocityScale: 1
   m_ForceGravityOnDetach: 0
-  m_UnparentTransformOnGrab: 1
+  m_UnparentTransformOnGrab: 0
   m_RetainTransformParent: 1
   m_StartingSingleGrabTransformers: []
   m_StartingMultipleGrabTransformers: []
   m_AddDefaultGrabTransformers: 1
-  m_FarAttachMode: 0
+  m_FarAttachMode: 1
   m_LimitLinearVelocity: 0
   m_LimitAngularVelocity: 0
   m_MaxLinearVelocityDelta: 10
@@ -2483,8 +2483,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Shiptest
   movementStick: {fileID: 1236430790}
-  maxStickAngle: 30
-  speed: 2
+  maxStickAngle: 10
+  speed: 10
 --- !u!4 &1610180893 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7917674758246323947, guid: 77e7c27b2c5525e4aa8cc9f99d654486, type: 3}

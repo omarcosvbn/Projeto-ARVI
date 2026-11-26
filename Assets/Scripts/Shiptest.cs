@@ -10,7 +10,7 @@ public class Shiptest : MonoBehaviour {
             return;
         }
 
-        float stickAngle = Mathf.DeltaAngle(0f, movementStick.localEulerAngles.z);
+        float stickAngle = -Mathf.DeltaAngle(0f, movementStick.localEulerAngles.z);
         float horizontalInput = Mathf.Clamp(stickAngle / maxStickAngle, -1f, 1f);
         transform.Translate(Vector3.right * horizontalInput * speed * Time.deltaTime, Space.World);
     }
