@@ -6,9 +6,15 @@ public class YawConnector : MonoBehaviour {
     [SerializeField] private float rollPerSpeed = 5f;
     [SerializeField] private float maxRoll = 15f;
     [SerializeField] private float rollSmoothing = 5f;
+    [SerializeField] private float pitchReturn = 4f;
 
     private Vector3 lastPosition;
     private float roll;
+    private float pitch;
+
+    public void Kick(float angle) {
+        pitch = Mathf.Max(pitch, angle);
+    }
 
     void Start() {
         lastPosition = vehicle.position;
@@ -22,7 +28,8 @@ public class YawConnector : MonoBehaviour {
         float sideSpeed = Vector3.Dot(velocity, vehicle.right);
         float targetRoll = Mathf.Clamp(-sideSpeed * rollPerSpeed, -maxRoll, maxRoll);
         roll = Mathf.Lerp(roll, targetRoll, rollSmoothing * Time.deltaTime);
+        pitch = Mathf.Lerp(pitch, 0f, pitchReturn * Time.deltaTime);
 
-        YawController.Instance.Tracker.SetRotation(vehicle.eulerAngles + new Vector3(0f, 0f, roll));
+        YawController.Instance.Tracker.SetRotation(vehicle.eulerAngles + new Vector3(-pitch, 0f, roll));
     }
 }

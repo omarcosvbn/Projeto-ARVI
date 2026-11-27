@@ -4551,15 +4551,23 @@ MonoBehaviour:
     m_Flags: 0
     m_Priority: 0
   range: 100
+  chair: {fileID: 1681154855}
+  haptics: {fileID: 2089960107}
   guns:
   - name: Blaster
     damage: 25
     fireInterval: 0.15
     tracerPrefab: {fileID: 1003, guid: d6f4c3b5ea077182cd9e4f5a6b7c8d94, type: 3}
+    chairKick: 0
+    hapticAmplitude: 0.4
+    hapticDuration: 0.05
   - name: Cannon
     damage: 100
     fireInterval: 2
     tracerPrefab: {fileID: 5288456931729454502, guid: 503bcd21f179fc84a8c679fd33fa43d3, type: 3}
+    chairKick: 6
+    hapticAmplitude: 0
+    hapticDuration: 0
 --- !u!1 &739689726
 GameObject:
   m_ObjectHideFlags: 0
@@ -9614,6 +9622,7 @@ MonoBehaviour:
   rollPerSpeed: 5
   maxRoll: 15
   rollSmoothing: 5
+  pitchReturn: 4
 --- !u!4 &1681154856
 Transform:
   m_ObjectHideFlags: 0
@@ -11586,6 +11595,17 @@ Transform:
   - {fileID: 1755339589}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2089960107 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6283329559392337895, guid: 77e7c27b2c5525e4aa8cc9f99d654486, type: 3}
+  m_PrefabInstance: {fileID: 1373153106}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b734f2bd29eeddd4d85afb0c266228c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2116793881
 GameObject:
   m_ObjectHideFlags: 0
